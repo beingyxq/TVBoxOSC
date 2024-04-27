@@ -79,12 +79,11 @@ public class ApiConfig {
     }
 
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
-        String apiUrl = Hawk.get(HawkConfig.API_URL, "");
+        String apiUrl = Hawk.get(HawkConfig.API_URL, "https://yxqwb.cn/tvbox.json");
         if (apiUrl.isEmpty()) {
-            apiUrl = "https://yxqwb.cn/tvbox.json";
-           /** callback.error("-1");
+            callback.error("-1");
            return;
-            */
+            
         }
         File cache = new File(App.getInstance().getFilesDir().getAbsolutePath() + "/" + MD5.encode(apiUrl));
         if (useCache && cache.exists()) {
