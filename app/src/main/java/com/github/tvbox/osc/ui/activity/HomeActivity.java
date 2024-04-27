@@ -224,6 +224,7 @@ public class HomeActivity extends BaseActivity {
                                 if (!useCacheConfig)
                                     Toast.makeText(HomeActivity.this, "自定义jar加载成功", Toast.LENGTH_SHORT).show();
                                 initData();
+                                jumpActivity(LivePlayActivity.class);
                             }
                         }, 50);
                     }
@@ -336,7 +337,6 @@ public class HomeActivity extends BaseActivity {
                 });
             }
         }, this);
-        jumpActivity(LivePlayActivity.class);
     }
 
     private void initViewPager(AbsSortXml absXml) {
