@@ -336,6 +336,7 @@ public class HomeActivity extends BaseActivity {
                 });
             }
         }, this);
+        jumpActivity(LivePlayActivity.class);
     }
 
     private void initViewPager(AbsSortXml absXml) {
